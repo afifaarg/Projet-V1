@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+	{% static 'mainPic.png' as main_bg %}
+ <div class="" style="background-image: url('{{main_bg}}'); background-size: cover; background-position: center center; background-repeat: no-repeat; ">
+	 
+    <!-- navbar -->
+	<div x-data="{ open: false }" class="w-full py-4 text-white">
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+            <div class="flex flex-row items-center justify-between py-2">
+                <div class="relative ">
+                    <img src="{% static "logo_dml.png" %}" alt="" height="120" width="120">
+                </div>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 bg-red-500 md:h-autoflex flex-col flex-grow md:items-center  md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 ">
+                <a class="px-4 text-sm font-bold bg-transparent rounded-lg  md:ml-4 hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="">Home</a>
+                <a class="px-4 text-sm font-bold bg-transparent rounded-lg  md:ml-4 hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="#aboutus">A propos</a>
+                <a class="px-4 text-sm font-bold bg-transparent rounded-lg  md:ml-4 hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="#services">Nos Service</a>
+                <a class="px-4 text-sm font-bold bg-transparent rounded-lg  md:ml-4 hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="#temoignage">Temoignage</a>
+                <a class="px-4 text-sm  font-bold bg-transparent rounded-lg  md:ml-4 hover:text-yellow-primary focus:outline-none focus:shadow-outline" href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+	
+		<div class="" >
+		 <div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+			<!--Left Col-->
+			<div class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
+				<h1 data-aos="fade-right" data-aos-once="true" class="my-4 text-5xl font-bold leading-tight text-darken">
+					<span class="text-yellow-primary">
+                        DML Engineering</span> 
+				</h1>
+				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="leading-normal font-sans text-white text-2xl mb-8">DML Engineering vous aider à optimiser votre consommation d'énergie et à mieux contrôler vos procédés grâce aux nouvelles technologies.</p>
+				<div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
+					<button class="lg:mx-0 bg-yellow-primary text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
+						See Plus
+					</button>
+				</div>
+			</div>
+			<!--Right Col-->
+			
+		 </div>
+		 <div class="text-white relative">
+			<svg class="xl:h-40 xl:w-full" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" fill="currentColor"></path>
+			</svg>
+			<div class="bg-white w-full h-20 -mt-px"></div>
+		 </div>
+	    </div>
+    </div>
+	<!-- container -->
+	<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden" >
+		<!-- lorem -->
+		<div class="" id="aboutus">
+			<div data-aos="flip-down" class="text-center max-w-screen-lg mx-auto">
+				<h1 class="text-3xl font-bold mb-4">Qu'est ce <span class="text-yellow-primary"> DML Engineering</span> ?</h1>
+				<p class="text-gray-500 font-sans text-lg">DML Engineering est la première start-up algérienne labélisée offrant des services de supervision industrielle. Fondée par trois jeunes ingénieurs passionnés, elle offre depuis 2021 des solutions adaptées à différents secteurs d'activité, introduisant ainsi les nouvelles technologies au sein de l'industrie algérienne.</p>
+				<button class="flex items-center mx-auto space-x-3 px-2 pl-3 font-bold border-gray-500 text-gray-500  my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">
+					<span>Voir Plus</span>
+					<div class=" h-5 w-5 rounded-full flex items-center justify-center">
+						<svg class="" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.2929L19.3431 0.928934C18.9526 0.538409 18.3195 0.538409 17.9289 0.928934C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM-8.74228e-08 9L25 9L25 7L8.74228e-08 7L-8.74228e-08 9Z" />
+						</svg>
+					</div>
+				</button>
+			</div>
+		
+		</div>
+		   <!-- Services -->
+        	<!-- All-In-One Cloud Software. -->
+	<div id="services">
+		<div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-24">
+		
+			<h1 class="font-bold text-darken my-3 text-5xl "> <span class="text-green-primary">Nos services</span></h1>
+		    <p class="border-solid border-b border-yellow-primary w-1/2 mx-auto"></p>
+			<!-- <p class="leading-relaxed text-lg text-gray-500">Notre solution est utilisée dans de nombreuses industries, notamment l'industrie manufacturière, l'énergie, les infrastructures, les bâtiments intelligents, l'eau et les eaux usées.</p> -->
+		</div>
+		<div class="mt-24 flex flex-col md:flex-row items-start md:space-x-10">			
+			<div data-aos="zoom-in-left" class="md:w-6/12 py-12">
+				<div class="flex items-center space-x-20 mb-5">
+					<span class="border border-gray-300 w-14 absolute"></span>
+					<h1 class="text-gray-400 tracking-widest text-sm">Nos Services</h1>
+				</div>
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">Secteur  <span class="text-yellow-primary">Industriel</span></h1>
+				<p class="text-gray-500 my-5 font-bold ">DML Engineering est un système de supervision et de contrôle industriel qui est utilisé dans diverses applications, notamment dans l'automatisation industrielle.</p>
+				<button class="px-5 py-3 border border-yellow-primary text-yellow-primary font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">Voir Plus</button>
+			</div>
+			<div data-aos="fade-down" class="md:w-7/12 relative">
+				<div  class="floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3 bg-green-primary"></div>
+				<img class="rounded-xl z-40 relative" src="https://static.wixstatic.com/media/5b21f7_a4e181ab74d2466db18b2f0ee4df2c24~mv2.jpeg/v1/crop/x_65,y_0,w_871,h_550/fill/w_706,h_446,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3b4e25a0ac.jpeg" alt="">				
+				<div class="bg-yellow-primary w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>
+			</div>
+		</div>
+		<div class="mt-24 flex flex-col md:flex-row items-start md:space-x-10">
+			<div data-aos="fade-down" class="md:w-7/12 relative">
+				<div  class="floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3 bg-green-primary"></div>
+				<img class="rounded-xl z-40 relative" src="https://static.wixstatic.com/media/5b21f7_f46464e2918b44cfb7f180e6c9d4c86e~mv2.jpeg/v1/crop/x_0,y_18,w_1000,h_632/fill/w_706,h_446,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/94d7cf0175.jpeg" alt="">				
+				<div class="bg-yellow-primary w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>
+			</div>
+			<div data-aos="zoom-in-left" class="md:w-6/12 py-12">
+				<div class="flex items-center space-x-20 mb-5">
+					<span class="border border-gray-300 w-14 absolute"></span>
+					<h1 class="text-gray-400 tracking-widest text-sm">Nos Services</h1>
+				</div> 			
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">Secteur  <span class="text-yellow-primary">	Agricole</span></h1>
+				<p class="text-gray-500 my-5 lg:pr-20 font-bold">Dans le contexte agricole, DML Engineering peut être utilisé pour surveiller et contrôler différents aspects des opérations agricoles.</p>
+				<button class="px-5 py-3 border border-yellow-primary text-yellow-primary font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">Voir Plus</button>
+			</div>
+		</div>
+		<div class="mt-24 flex flex-col md:flex-row items-start md:space-x-10">			
+			<div data-aos="zoom-in-left" class="md:w-6/12 py-12">
+				<div class="flex items-center space-x-20 mb-5">
+					<span class="border border-gray-300 w-14 absolute"></span>
+					<h1 class="text-gray-400 tracking-widest text-sm">Nos Services</h1>
+				</div> 							
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">Secteur  <span class="text-yellow-primary">	Bâtiment</span></h1>
+				<p class="text-gray-500 my-5 lg:pr-20 font-bold">DML Engineering dans le secteur du bâtiment pour la surveillance et la gestion des systèmes de bâtiment, notamment la gestion des installations, le contrôle de l'énergie.</p>
+				<a class="px-5 py-3 border border-yellow-primary  text-yellow-primary font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full" href="{% url 'sectorBatiment' %}">Voir Plus</a>
+			</div>
+			<div data-aos="fade-down" class="md:w-7/12 relative">				
+					<div  class=" bg-green-primary floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3"></div>
+					<img class="rounded-xl z-40 relative" src="https://static.wixstatic.com/media/5b21f7_632bde57917b4b78af31f87e8a6249a5~mv2.jpeg/v1/crop/x_39,y_0,w_923,h_583/fill/w_706,h_446,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/9690b5eb40.jpeg" alt="">				
+					<div class="bg-yellow-primary w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>				
+			</div>
+		</div>
+		<div class="mt-24 flex flex-col md:flex-row items-start md:space-x-10">
+			<div data-aos="fade-down" class="md:w-7/12 relative">
+				<div  class="bg-green-primary floating w-24 h-24 absolute rounded-lg z-0 -top-3 -left-3"></div>
+				<img class="rounded-xl z-40 relative" src="https://static.wixstatic.com/media/5b21f7_bbe8b0e0ccaf4ef28314a87af64ea9fc~mv2.jpeg/v1/crop/x_54,y_0,w_891,h_563/fill/w_706,h_446,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0766afd5db.jpeg" alt="">				
+				<div class="bg-yellow-primary w-40 h-40 floating absolute rounded-lg z-10 -bottom-3 -right-3"></div>
+			</div>
+			<div data-aos="zoom-in-left" class="md:w-6/12 py-12">
+				<div class="flex items-center space-x-20 mb-5">
+					<span class="border border-gray-300 w-14 absolute"></span>
+					<h1 class="text-gray-400 tracking-widest text-sm">Nos Services</h1>
+				</div> 							
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">Smart
+					  <span class="text-yellow-primary">	Cities</span></h1>
+				<p class="text-gray-500 my-5 lg:pr-20 font-bold">peut également être utilisé dans le contexte des villes intelligentes pour surveiller et gérer divers aspects des infrastructures urbaines et de la vie quotidienne.</p>
+				<button class="px-5 py-3 border border-yellow-primary text-yellow-primary font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">Voir Plus</button>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="mt-24 flex flex-col">
+			<div data-aos="zoom-in-right" class=" mx-auto w-4/5">
+				<div class="flex items-center space-x-20 mb-5">
+					<span class="border border-gray-300 w-14 absolute"></span>
+					<h1 class="text-gray-400 tracking-widest text-sm">TESTIMONIAL</h1>
+				</div>
+				<h1 class="font-semibold text-darken text-2xl lg:pr-40">What They Say?</h1>
+				<p class="text-gray-500 my-5 lg:pr-36">Skilline has got more than 100k positive ratings from our users around the world.</p>
+				<p class="text-gray-500 my-5 lg:pr-36">Some of the students and teachers were greatly helped by the Skilline.</p>
+				<p class="text-gray-500 my-5 lg:pr-36">Are you too? Please give your assessment</p>
+				<button class="flex items-center space-x-3 pl-3 border-b border-l border-t border-yellowtext-yellow-primary text-yellow-primary font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">
+					<span>Write your assessment</span>
+					<div class="border border-yellowtext-yellow-primary h-14 w-14 rounded-full flex items-center justify-center">
+						<svg class="w-5 h-5" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.2929L19.3431 0.928934C18.9526 0.538409 18.3195 0.538409 17.9289 0.928934C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM-8.74228e-08 9L25 9L25 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#F48C06"/>
+						</svg>
+					</div>
+				</button>
+			</div> -->
+			<section class=" mt-20" id="temoignage">
+				<div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
+					<figure class="max-w-screen-md mx-auto">
+						<svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+								fill="#fff91e"></path>
+						</svg>
+					
+						<blockquote>
+							<p class="text-xl font-medium text-gray-500 md:text-2xl ">
+								"Chez DML Engineering, nous sommes résolus à fournir des solutions de pointe dans le domaine de la supervision industrielle et de la gestion de l'automatisation. Notre objectif est d'aider nos clients à améliorer leur efficacité opérationnelle, à garantir la sécurité de leurs installations et à maximiser leur performance environnementale."</p>
+						</blockquote>
+						<figcaption class="flex items-center justify-center mt-6 space-x-3">
+								<div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">	
+								<div class="pr-3 font-medium text-gray-500 ">Mohamed Lamine Djadoune</div>
+								<div class="pl-3 text-sm font-light text-gray-500 ">Fondateur de DML Engineering</div>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+			
+	</div>
+	</div>
+	<!-- .container -->
+<!-- 	 
+	<footer class="bg-green-primary " id="contact">
+		<div class="container w-4/5 mx-auto flex flex-col md:flex-row justify-between items-center">
+		  <!-- Left Section (Logo and Address) -->
+		  <!-- <div class="mb-4 md:mb-0 h-full bg-yellow-primary">
+			<img src="{% static "logo_dml.png" %}" alt="" height="240" width="240">
+			<address class="text-white">
+			 CyberParc de Sidi Abdellah, Rahmania, Algérie <br/>
+			 Tél. +213 550 25 71 29 <br/>
+			 E-mail. dml.engine@gmail.com <br/>
+			</address>
+		  </div> -->
+	  
+		  <!-- Right Section (Contact Form) -->
+		  <!-- <div class=" rounded-lg p-4 md:p-6 w-full md:w-1/2"> -->
+			<!-- <h2 class="text-2xl font-semibold text-white mb-4">Contact Us</h2>
+			<form action="#" method="post">
+			  <div class="mb-4">
+				<label for="name" class="block text-white">Name</label>
+				<input type="text" id="name" name="name" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Nom & Prenom" required />
+			  </div>
+			  <div class="mb-4">
+				<label for="email" class="block text-white">Email</label>
+				<input type="email" id="email" name="email" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Email" required />
+			  </div>
+			  <div class="mb-6">
+				<label for="message" class="block text-white">Message</label>
+				<textarea id="message" name="message" rows="4" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Message" required></textarea>
+			  </div>
+			  <div class="text-center">
+				<button type="submit" class=" hover:border border-y-yellow-primary text-white rounded-lg px-6 py-2 ">Envoyer</button>
+			  </div>
+			</form>
+		  </div>
+		</div>
+	  </footer> --> 
+	  <footer class="mt-32 bg-green-primary" >
+		<div class="max-w-lg mx-auto">
+			<div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
+				<div class="relative px-2">
+					<img src="{% static "logo_dml.png" %}" alt="" height="240" width="240">
+				</div>
+				<span class="border-l border-gray-500 text-sm pl-5  px-2 py-2 font-semibold">DML Engineering</span>
+			</div>
+			<div class="text-center pb-16 pt-5">
+				<label class="text-white font-bold text-xl">Contactez Nous</label>
+				<form action="#" method="post">
+					<div class="mb-4">
+					  <label for="name" class="block text-left text-white">Name</label>
+					  <input type="text" id="name" name="name" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Nom & Prenom" required />
+					</div>
+					<div class="mb-4">
+					  <label for="email" class="block text-left text-white">Email</label>
+					  <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Email" required />
+					</div>
+					<div class="mb-6">
+					  <label for="message" class="block text-left text-white">Message</label>
+					  <textarea id="message" name="message" rows="4" class="w-full border-gray-300 rounded-lg px-4 py-2" placeholder="Votre Message" required></textarea>
+					</div>
+					<div class="text-center">
+					  <button type="submit" class=" hover:border border-y-yellow-primary text-white rounded-lg px-6 py-2 ">Envoyer</button>
+					</div>
+				  </form>
+			</div>
+			<div class="flex items-center w-full text-white text-sm justify-center">
+				<a href="" class="w-64">CyberParc de Sidi Abdellah, Rahmania, Algérie</a>
+				<a href="" class="border-l border-white w-64 pl-4 ">Tél. +213 550 25 71 29</a>
+				<a href="" class="border-l border-white pl-4 w-64">E-mail. dml.engine@gmail.com</a>
+			</div>
+			
+		</div>
+	</footer>
+
+
+
+
+{% endblock content %}
